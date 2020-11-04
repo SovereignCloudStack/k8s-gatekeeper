@@ -1,5 +1,10 @@
 #!/bin/bash
 
-set -ex
-
-kubectl wait deployment hello-world --for=condition=Available
+until [[ "$(kubectl get deployment gatekeeper-controller-manager -n gatekeeper-system '--output=go-template={{.status.readyReplicas}}')" = "1" ]]
+do
+  sleep 1
+done
+until [[ "$(kubectl get deployment gatekeeper-audit -n gatekeeper-system '--output=go-template={{.status.readyReplicas}}')" = "1" ]]
+do
+  sleep 1
+done
