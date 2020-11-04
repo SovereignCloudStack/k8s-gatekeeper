@@ -1,4 +1,4 @@
-# Deployment manifests for OPA Gatekkeper
+# Deployment manifests for OPA Gatekeeper
 
 ## Attributions
 
