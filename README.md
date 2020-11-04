@@ -1,4 +1,4 @@
-# Deployment manifests for MinIO®
+# Deployment manifests for OPA Gatekkeper
 
 ## Attributions
 
