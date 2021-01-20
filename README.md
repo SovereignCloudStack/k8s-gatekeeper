@@ -1,13 +1,9 @@
-# Deployment manifests for OPA Gatekeeper
-
-## Attributions
-
-OpenPolicyAgent is not affiliated with the SCS project.
+# Deployment manifests for Gatekeeper
 
 ## Repository content
 
 This repository is intended to include all relevant configuration
-and Kubernetes manifests for the deployment of the OpenPolicyAgent inside SCS.
+and Kubernetes manifests for the deployment of Gatekeeper inside SCS.
 
 ## Repository layout
 
@@ -20,4 +16,5 @@ environments/clusters.
 In order to ensure that every component inside of SCS behaves as
 expected, there should be simple smoke tests.
 These tests are implemented using GitHub Actions/Workflows.
+
 
