@@ -1,6 +1,2 @@
 bases:
 - ../../base
-- github.com/open-policy-agent/gatekeeper?ref=master
-
-resources:
-- credentials.yaml

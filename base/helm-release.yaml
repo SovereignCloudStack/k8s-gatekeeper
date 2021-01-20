@@ -1,0 +1,11 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: gatekeeper
+spec:
+  chart:
+    repository: https://open-policy-agent.github.io/gatekeeper/charts
+    version: v3.2.2
+    name: gatekeeper
+  values:
+    logLevel: INFO

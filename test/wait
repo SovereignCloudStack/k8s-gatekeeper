@@ -1,12 +1,7 @@
 #!/bin/bash
 
-#until [[ "$(kubectl get deployment gatekeeper-controller-manager -n gatekeeper-system '--output=go-template={{.status.readyReplicas}}')" = "1" ]]
-#do
-#  sleep 1
-#done
-#until [[ "$(kubectl get deployment gatekeeper-audit -n gatekeeper-system '--output=go-template={{.status.readyReplicas}}')" = "1" ]]
-#do
-#  sleep 1
-#done
+kubectl get event --watch &
 
-kubectl get deployments -n gatekeeper-system
+set -ex
+
+kubectl wait helmrelease cortex --for=condition=Deployed --timeout=10m
