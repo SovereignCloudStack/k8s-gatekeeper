@@ -1,4 +1,6 @@
 name_path: gatekeeper
 name_title:
-- Gatekeeper
-name_description: Gatekeeper
+- OPA Gatekeeper
+name_description: the Open Policy Agent Gatekeeper
+appendix: |-
+  Open Policy Agent website: https://www.openpolicyagent.org/
