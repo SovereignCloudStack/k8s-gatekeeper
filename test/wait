@@ -4,4 +4,5 @@ kubectl get event --watch &
 
 set -ex
 
-kubectl wait helmrelease cortex --for=condition=Deployed --timeout=10m
+kubectl wait helmrelease gatekeeper --for=condition=Deployed --timeout=10m
+kubectl wait deployment -n gatekeeper-system gatekeeper-controller-manager --for=condition=Available
