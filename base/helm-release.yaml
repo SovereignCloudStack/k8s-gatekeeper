@@ -3,6 +3,7 @@ kind: HelmRepository
 metadata:
   name: gatekeeper
 spec:
+  interval: 10m
   url: https://open-policy-agent.github.io/gatekeeper/charts
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
