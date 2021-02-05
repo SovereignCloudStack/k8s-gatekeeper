@@ -10,6 +10,7 @@ kind: HelmRelease
 metadata:
   name: gatekeeper
 spec:
+  interval: 1m
   chart:
     spec:
       chart: gatekeeper
