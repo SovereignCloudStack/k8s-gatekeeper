@@ -1,17 +1,3 @@
 bases:
 - ../../base
 - https://github.com/open-policy-agent/gatekeeper-library/library/pod-security-policy/privileged-containers?ref=master
-- github.com/fluxcd/helm-operator/deploy?ref=1.2.0
-
-patchesJSON6902:
-- target:
-    group: apps
-    version: v1
-    kind: Deployment
-    name: helm-operator
-    namespace: flux
-  patch: |-
-    - op: replace
-      path: /spec/template/spec/containers/0/args
-      value:
-        - --enabled-helm-versions=v3
