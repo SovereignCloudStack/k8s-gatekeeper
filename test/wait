@@ -7,4 +7,4 @@ set -ex
 kubectl wait helmrelease gatekeeper --for=condition=Ready --timeout=10m
 kubectl wait deployment -n gatekeeper-system gatekeeper-controller-manager --for=condition=Available
 
-kubectl run --privileged --image=busybox --restart=Never violating-pod -- sh -c 'sleep infinity'
+kubectl get validatingwebhookconfiguration -A -oyaml
