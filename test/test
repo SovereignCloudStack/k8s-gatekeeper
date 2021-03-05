@@ -17,4 +17,4 @@ spec:
 EOF
 
 # Check if constraint is enforced
-kubectl run --privileged --image=busybox --restart=Never violating-pod -- sh -c 'sleep infinity'
+kubectl run --privileged --image=busybox --restart=Never violating-pod -- sh -c 'sleep infinity' && exit 1 || exit 0
