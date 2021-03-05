@@ -2,4 +2,19 @@
 
 set -ex
 
+# Setup constraint
+kubectl apply -f - <<EOF
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sPSPPrivilegedContainer
+metadata:
+  name: no-privileged-containers-allowed
+spec:
+  match:
+    kinds:
+    - apiGroups: [""]
+      kinds:
+      - Pod
+EOF
+
+# Check if constraint is enforced
 kubectl run --privileged --image=busybox --restart=Never violating-pod -- sh -c 'sleep infinity'

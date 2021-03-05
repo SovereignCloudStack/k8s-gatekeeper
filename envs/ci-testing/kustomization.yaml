@@ -1,6 +1,5 @@
 bases:
 - ../../base
-- https://github.com/open-policy-agent/gatekeeper-library/library/pod-security-policy/privileged-containers?ref=master
 
 resources:
-- constraint.yaml
+- gatekeeper-library.yaml

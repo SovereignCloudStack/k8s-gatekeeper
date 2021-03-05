@@ -5,6 +5,5 @@ kubectl get event --watch &
 set -ex
 
 kubectl wait helmrelease gatekeeper --for=condition=Ready --timeout=10m
+kubectl wait kustomization -n flux-system gatekeeper-library --for=condition=Ready --timeout=10m
 kubectl wait deployment -n gatekeeper-system gatekeeper-controller-manager --for=condition=Available
-
-kubectl get validatingwebhookconfiguration -A -oyaml
