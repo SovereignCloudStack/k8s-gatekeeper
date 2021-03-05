@@ -2,6 +2,4 @@
 
 set -ex
 
-sleep 10
-
 kubectl run --privileged --image=busybox --restart=Never violating-pod -- sh -c 'sleep infinity'

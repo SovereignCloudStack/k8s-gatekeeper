@@ -1,0 +1,10 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sPSPPrivilegedContainer
+metadata:
+  name: no-privileged-containers-allowed
+spec:
+  match:
+    kinds:
+    - apiGroups: [""]
+      kinds:
+      - Pod
